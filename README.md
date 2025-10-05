@@ -2,9 +2,7 @@
 
 *Simulation and reverse-engineering of mechanistic GRN-driven models of gene expression*
 
-Material for hands-on session at [CompSysBio2025](https://project.inria.fr/compsysbio2025/) (Advanced Lecture Course on Computational Systems Biology).
-
-This repository is dedicated to the first part. Here we deal with simulation of mechanistic models, including stochastic gene expression.
+This repository is dedicated to the first part: here we deal with simulating mechanistic models of gene expression driven by gene regulatory networks (GRNs), with an emphasis on piecewise-deterministic Markov processes (PDMPs) to describe biological stochasticity at the single-cell level.
 
 ## Quickstart
 
