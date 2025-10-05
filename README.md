@@ -15,6 +15,6 @@ Now you can start! The files to be modified are:
 
 - `models/bursty_base.py`
 - `models/bursty_grn.py`
-- `models/ode_grn.py`
+- `models/limit_grn.py`
 
 **Note:** If step 2 is not done, you will not be able to run directly the `models/...` files (which can be useful for testing). But you can always run the `main.py` script and load `models` from there.
