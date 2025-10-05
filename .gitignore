@@ -1,0 +1,8 @@
+# OS files
+*.DS_Store
+
+# Python
+*.pyc
+
+# Other
+.ipynb_checkpoints
