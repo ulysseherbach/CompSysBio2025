@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "models"
+dynamic = ["version"]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "matplotlib>=3.8",
+]
+requires-python = ">=3.10"
+authors = [
+    {name = "Ulysse Herbach", email = "ulysse.herbach@inria.fr"},
+]
+description = "CompSysBio2025 hands-on session"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ulysseherbach/CompSysBio2025"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/.*"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["models"]
+
+[tool.hatch.version]
+source = "vcs"
+raw-options = {local_scheme = "no-local-version"}
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E402", "E741"]
