@@ -46,7 +46,7 @@ for i in range(3):
 # Plot protein levels (ODE model)
 ax = plt.subplot(gs[1, 0])
 for i in range(3):
-    ax.set_title(r'Protein levels - ODE model ($d_0/d_1\to\infty$)')
+    ax.set_title('ODE limit model ($k_{\\mathrm{on}}/d_1\\to\\infty$)')
     ax.plot(sim_ode.t, sim_ode.x[:, i], label=f'$P_{{{i+1}}}$')
     ax.set_xlim(sim_ode.t[0], sim_ode.t[-1])
     ax.set_ylim(0, 1)
