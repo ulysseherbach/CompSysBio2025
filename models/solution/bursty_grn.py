@@ -99,14 +99,14 @@ class BurstyGRN:
         t, x = 0, init_state
 
         # Initialize previous time and state
-        t_old, x_old = t, x.copy()
+        t_old, x_old = t, x
 
         # Core loop for simulation and recording
         for k in range(time.size):
             while t < time[k]:
 
                 # Update previous time and state
-                t_old, x_old = t, x.copy()
+                t_old, x_old = t, x
 
                 # Update current time and state
                 u, x, is_jump = self.random_step(x, rng)
@@ -115,11 +115,8 @@ class BurstyGRN:
                 # Optional: record jump counts
                 n_jumps[int(is_jump)] += 1
 
-            # Interpolate until current time
-            x = self.flow(t - t_old, x_old)
-            
             # Record protein levels
-            traj[k] = x
+            traj[k] = self.flow(time[k] - t_old, x_old)
 
         # Display info about jumps
         if verb:
