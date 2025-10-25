@@ -3,7 +3,7 @@ import numpy as np
 from models.networks import repressilator
 import models
 # # Uncomment to use the solution
-# import models.solution as models
+# import models_solution as models
 
 # # 1. Single gene with no feedback
 # model = models.BurstyBase()
